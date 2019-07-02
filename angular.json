@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "inetShopEasy": {
+    "angular.io-example": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,12 +13,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/inetShopEasy",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -58,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "inetShopEasy:build"
+            "browserTarget": "angular.io-example:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "inetShopEasy:build:production"
+              "browserTarget": "angular.io-example:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "inetShopEasy:build"
+            "browserTarget": "angular.io-example:build"
           }
         },
         "test": {
@@ -106,15 +105,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "inetShopEasy:serve"
+            "devServerTarget": "angular.io-example:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "inetShopEasy:serve:production"
+              "devServerTarget": "angular.io-example:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "inetShopEasy"
+    }
+  },
+  "defaultProject": "angular.io-example"
 }
